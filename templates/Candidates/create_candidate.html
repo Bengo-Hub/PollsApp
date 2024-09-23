@@ -1,0 +1,10 @@
+{% load widget_tweaks %}
+{% block content %}
+<div class="card">
+    <h2>Candidate Sign-Up</h2>
+    <form method="POST" action="."> 
+        {% csrf_token %}
+        {% include 'Core/base_form.html' with messages=messages form=form button_value='Register' form_id='candidate_signup_form' %}
+    </form>
+</div>
+{% endblock %}

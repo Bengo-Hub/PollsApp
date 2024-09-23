@@ -38,9 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     #custom apps
+    'authentication',
     'Candidates',
 ]
+
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,7 +87,16 @@ DATABASES = {
     }
 }
 
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'Polls',
+#         'USER': 'root',
+#         'HOST':'localhost',
+#         'PASSWORD':'root',
+#         'PORT':3306,
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
