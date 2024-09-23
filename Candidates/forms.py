@@ -10,7 +10,7 @@ class CandidateCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser  # Assuming CustomUser is your user model
-        fields = ['id_no', 'gender', 'password1', 'password2', 'post', 'manifesto', 'background_info']
+        fields = ['id_no', 'gender', 'email','first_name','last_name', 'password1', 'password2', 'post', 'manifesto', 'background_info']
 
 class CandidateUpdateForm(UserChangeForm):
     post = forms.ModelChoiceField(queryset=Posts.objects.all(), required=True)
@@ -19,4 +19,4 @@ class CandidateUpdateForm(UserChangeForm):
 
     class Meta:
         model = CustomUser  # Assuming CustomUser is your user model
-        fields = ['id_no', 'gender', 'password', 'post', 'manifesto', 'background_info']
+        fields = ['id_no', 'gender', 'email','first_name','last_name', 'password', 'post', 'manifesto', 'background_info']
